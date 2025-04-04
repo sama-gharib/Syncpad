@@ -19,4 +19,5 @@ Execute the editor with `./syncpad [insert file path here]`.
 # Roadmap
   - Fix non printable characters insertion
   - Fix tab handling
+  - Add modal editor client with vim-like bindings
   - Add basic server/client for text editing in team
