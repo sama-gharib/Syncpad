@@ -122,8 +122,11 @@ impl Editor {
 	// Getters
 
 	pub fn get_line_display(&self, line: isize, width: usize) -> String {
-		let line = Self::bounds(line, 0, self.get_line_count()-1);
-		let line = self.text[line as usize].clone();
+		let line = if line > -1 && line < self.get_line_count() {
+				self.text[line as usize].clone()
+			} else {
+				vec!['~']
+			};
 
 		if line.len() < width {
 			line.iter().collect()
